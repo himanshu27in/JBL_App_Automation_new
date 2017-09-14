@@ -30,6 +30,7 @@ app_version = "jbl.stc.com:id/appVersion"
 
 
 
+
 class common_function(unittest.TestCase):
 
     @staticmethod
@@ -57,7 +58,7 @@ class common_function(unittest.TestCase):
         return self.driver.find_element_by_id(smart_button)
     
     #navigation function to setting screen
-    
+    @staticmethod
     def navigateToSettingPage(self):
         self.settingButton().click()
         
