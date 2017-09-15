@@ -1,9 +1,8 @@
 '''
-Created on Sep 11, 2017
+Created on Sep 15, 2017
 
 @author: hkumar04
 '''
-
 #import unittest
 from com.jbl.config import setupConfig
 from com.jbl.common_method import AppPrelaunchPage as app
@@ -14,11 +13,11 @@ from com.jbl.common_method import AppProgrammableSmartButtonPage as absbp
 from ptr import null
 
 
-class Test_appSetting(setupConfig):
+class Test_appProgrammableSmartButton(setupConfig):
 
 
         
-    def test_01(self):
+    def test_01_ambientaware_setting(self):
           
         self.driver.implicitly_wait(14000)
         if app.skipSkin(self) != null:
