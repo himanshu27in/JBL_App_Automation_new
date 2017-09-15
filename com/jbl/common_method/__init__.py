@@ -1,1 +1,4 @@
-from commonMethod import common_function
+from commonMethod import AppPrelaunchPage
+from commonMethod import AppLaunchPage
+from commonMethod import AppSettingPage
+from commonMethod import AppProgrammableSmartButtonPage
