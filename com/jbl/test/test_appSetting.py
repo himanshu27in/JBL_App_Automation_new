@@ -16,7 +16,6 @@ from ptr import null
 
 class Test_appSetting(setupConfig):
 
-
         
     def test_01(self):
           
@@ -32,4 +31,5 @@ class Test_appSetting(setupConfig):
         
         aa_button = absbp.ambientawareButton(self)
         aa_button.click()
+        self.assertEqual(1, 1, 'Equal')
 #         print "AA button clicked\n"

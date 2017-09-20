@@ -11,12 +11,12 @@ from com.jbl.common_method import AppLaunchPage as alp
 from com.jbl.common_method import AppProgrammableSmartButtonPage as absbp
 #from com.jbl.common_method.commonMethod import skipButton
 from ptr import null
-
+import unittest
 
 class Test_appProgrammableSmartButton(setupConfig):
 
 
-        
+#    @unittest.skip("Test Skipped2")      
     def test_01_ambientaware_setting(self):
           
         self.driver.implicitly_wait(14000)

@@ -12,10 +12,10 @@ from com.jbl.common_method import AppLaunchPage as alp
 #from com.jbl.test.test_appSetting import Test_appSetting
 from ptr import null
 import logging
-
+import unittest
 
 class Test_launchApp(setupConfig):
-    
+#    @unittest.skip("Test Skipped2")  
     def test_01_appLaunch(self):
         self.driver.implicitly_wait(14000)
         skip_ele = app.skipSkin(self)     #class name is used to call skipSkin function as it is a static method
@@ -24,22 +24,24 @@ class Test_launchApp(setupConfig):
 #         logging.debug("passing---")
         logging.info("passed--------")
      
+#    @unittest.skip("Test Skipped1")
     def test_02_settingButton(self):
-          
+           
         self.driver.implicitly_wait(14000)
         if app.skipSkin(self) != null:
             app.skipSkin(self).click()
-           
+            
         setting_btn = alp.settingButton(self)
         setting_btn.click()
         
+#    @unittest.skip("Test Skipped2")    
     def test_03_ancsetting(self):
-        
+         
         self.driver.implicitly_wait(14000)
         if app.skipSkin(self) != null:
             app.skipSkin(self).click()
+          
          
-        
         anc_button = alp.ancButton(self)
         anc_button.click()
 #         print "ANC button clicked\n"
