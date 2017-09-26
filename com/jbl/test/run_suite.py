@@ -36,7 +36,7 @@ Created on Sep 11, 2017
 
 
 
-   
+    
 import unittest
 import test_appSetting
 import test_app_launch_page
@@ -44,26 +44,26 @@ import test_app_programmableSmartButton_page
 #import HtmlTestRunner
 from HtmlTestRunner import HTMLTestRunner
 import logging
-
-   
+ 
+    
 #####  Running test case- by using below run method each test result will be displayed
-   
+    
     #initialize the test suite
 def main():   
     loader = unittest.TestLoader()
     suite = unittest.TestSuite()
-          
+           
         # add tests to test suite
-          
+           
     suite.addTest(loader.loadTestsFromModule(test_appSetting))
     suite.addTest(loader.loadTestsFromModule(test_app_launch_page))
     suite.addTest(loader.loadTestsFromModule(test_app_programmableSmartButton_page))
-        
+         
     # runner = unittest.TextTestRunner(verbosity=2)
     # result = runner.run(suite)
     logging.debug("This will be printed 1============================")  
-    
-    
+     
+     
     logging.debug("This will be printed 2============================")   
     #unittest.TextTestRunner(verbosity=2).run(suite)
     #outfile = open('JBL_Test_Report')
@@ -72,6 +72,9 @@ def main():
     logging.debug("This will be printed 3============================")  
     runner.run(suite)
     logging.debug("This will be printed 4============================")  
-
+ 
 if __name__ == "__main__":
     main()
+
+
+    
