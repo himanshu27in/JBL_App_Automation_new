@@ -9,6 +9,7 @@ import unittest
 # app first page
 skip_button = "jbl.stc.com:id/skipButton"
 setting_button = "jbl.stc.com:id/leftHeaderBtn"
+trunote_txt = "TruNote"
 truenote_button = "jbl.stc.com:id/rightBtnText"
 battery_percent = "jbl.stc.com:id/txtBattery"
 right_arrow = "jbl.stc.com:id/rightArrow"
@@ -38,6 +39,7 @@ left_header_button = "jbl.stc.com:id/leftHeaderBtn"
 
 class AppPrelaunchPage(unittest.TestCase):
 
+# This function will return skip button id
     @staticmethod
     def skipSkin(self):
         return self.driver.find_element_by_id(skip_button)
@@ -45,15 +47,22 @@ class AppPrelaunchPage(unittest.TestCase):
 
 class AppLaunchPage(unittest.TestCase):
 
-     
+# This function will return setting button id     
     @staticmethod   
     def settingButton(self):
         return self.driver.find_element_by_id(setting_button)
-    
+
+# This function will return Trunote text 
+    @staticmethod
+    def truNoteText(self):
+        return self.driver.find_element_by_xpath("//android.widget.TextView[@text = 'TruNote']").text
+
+# This function will return Trunote button id
     @staticmethod
     def trueNoteButton(self):
         return self.driver.find_element_by_id(truenote_button)
     
+# This function will return anc button id    
     @staticmethod
     def ancButton(self):
         return self.driver.find_element_by_id(anc_button)
