@@ -37,8 +37,6 @@ programmable_button_title_text = "jbl.stc.com:id/barTitleText"
 left_header_button = "jbl.stc.com:id/leftHeaderBtn"
 
 
-
-
 class AppPrelaunchPage(unittest.TestCase):
 
 # This function will return skip button id
@@ -80,6 +78,7 @@ class AppSettingPage(unittest.TestCase):
         return self.driver.find_element_by_id(smart_button)      
     
     #navigation function to setting screen
+
     
 class AppProgrammableSmartButtonPage(unittest.TestCase):
     
@@ -90,7 +89,8 @@ class AppProgrammableSmartButtonPage(unittest.TestCase):
  
  
 class AppNavigationPage(unittest.TestCase):   
-    
+
+    @staticmethod
     def navigateToSettingPage(self):
         self.settingButton().click()
         
