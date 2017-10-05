@@ -59,21 +59,17 @@ def main():
     suite.addTest(loader.loadTestsFromModule(test_app_launch_page))
     suite.addTest(loader.loadTestsFromModule(test_app_programmableSmartButton_page))
          
-    # runner = unittest.TextTestRunner(verbosity=2)
-    # result = runner.run(suite)
     logging.debug("This will be printed 1============================")  
      
      
     logging.debug("This will be printed 2============================")   
-    #unittest.TextTestRunner(verbosity=2).run(suite)
-    #outfile = open('JBL_Test_Report')
-    #runner = HTMLTestRunner(output='D:\\Automation\\Eclipse_workspace\\JBL_python\\com\\jbl\\test\\')
     runner = HTMLTestRunner(output='JBL_Test_Report')
     logging.debug("This will be printed 3============================")  
     runner.run(suite)
     logging.debug("This will be printed 4============================")  
  
 if __name__ == "__main__":
+    print "this wil be printed in main----------------------"
     main()
 
 

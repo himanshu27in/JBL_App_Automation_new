@@ -3,25 +3,19 @@ Created on Sep 4, 2017
 @author: hkumar04
 '''
 
-#import unittest
 from com.jbl.config import setupConfig
 from com.jbl.common_method import AppPrelaunchPage as app
 from com.jbl.common_method import AppLaunchPage as alp
-#from com.jbl.common_method.commonMethod import skipButton
-
-#from com.jbl.test.test_appSetting import Test_appSetting
-from ptr import null
-#import logging
-import unittest
+from com.jbl.common_method import constants
 import logging
 
-
 class Test_launchApp(setupConfig):
+    
 
 # Test to verify skin is displayed while App launch
 #    @unittest.skip("Test Skipped2")  
     def test_01_appLaunch(self):
-        self.driver.implicitly_wait(14000)
+        self.driver.implicitly_wait(constants.wait_for_app_launch)
         skip_ele = app.skipSkin(self)     #class name is used to call skipSkin function as it is a static method
         logging.debug("skip_ele.click() is called-----")
         skip_ele.click()
@@ -31,8 +25,8 @@ class Test_launchApp(setupConfig):
 #     @unittest.skip("Test Skipped1")
     def test_02_settingButton(self):
  
-        self.driver.implicitly_wait(14000)
-        if app.skipSkin(self) != null:
+        self.driver.implicitly_wait(constants.wait_for_app_launch)
+        if app.skipSkin(self) != None:
             app.skipSkin(self).click()
             
         setting_btn = alp.settingButton(self)
@@ -41,8 +35,8 @@ class Test_launchApp(setupConfig):
 
 # Test to verify the TruNote text after App launch
     def test_03_truNoteText(self):
-        self.driver.implicitly_wait(14000)
-        if app.skipSkin(self) != null:
+        self.driver.implicitly_wait(constants.wait_for_app_launch)
+        if app.skipSkin(self) != None:
             app.skipSkin(self).click()
 
         truNote_txt = alp.truNoteText(self)
@@ -53,8 +47,8 @@ class Test_launchApp(setupConfig):
 #     @unittest.skip("Test Skipped2")    
     def test_04_ancsetting(self):
          
-        self.driver.implicitly_wait(14000)
-        if app.skipSkin(self) != null:
+        self.driver.implicitly_wait(constants.wait_for_app_launch)
+        if app.skipSkin(self) != None:
             app.skipSkin(self).click()
           
          

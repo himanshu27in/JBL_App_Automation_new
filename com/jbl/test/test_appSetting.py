@@ -4,23 +4,24 @@ Created on Sep 11, 2017
 @author: hkumar04
 '''
 
-#import unittest
 from com.jbl.config import setupConfig
 from com.jbl.common_method import AppPrelaunchPage as app
 from com.jbl.common_method import AppSettingPage as asp
 from com.jbl.common_method import AppLaunchPage as alp
 from com.jbl.common_method import AppProgrammableSmartButtonPage as absbp
-#from com.jbl.common_method.commonMethod import skipButton
-from ptr import null
+from com.jbl.common_method import constants
 
 
 class Test_appSetting(setupConfig):
+    
 
         
     def test_01(self):
-          
-        self.driver.implicitly_wait(14000)
-        if app.skipSkin(self) != null:
+        
+        
+        #setupConfig.wait_for_App_launch(self)
+        self.driver.implicitly_wait(constants.wait_for_app_launch)
+        if app.skipSkin(self) != None:
             app.skipSkin(self).click()
           
         setting_btn = alp.settingButton(self)

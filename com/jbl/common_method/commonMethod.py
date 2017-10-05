@@ -3,8 +3,21 @@ Created on Sep 7, 2017
 
 @author: hkumar04
 '''
-import unittest
 
+import unittest
+import constants
+
+
+# from selenium.webdriver.support.wait import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.common.by import By
+
+# class WaitForLaunch():
+#     @staticmethod
+#     def waitfor(self,element_id):
+#         element_wait = WebDriverWait(self.driver,15)
+#         #currently_waiting_for = element_wait.until(EC.element_located_to_be_selected(By.ID,element_id))
+#         element_wait.until(EC.invisibility_of_element_located(element_id),"Element is found")
 
 # app first page
 skip_button = "jbl.stc.com:id/skipButton"
@@ -42,7 +55,8 @@ class AppPrelaunchPage(unittest.TestCase):
 # This function will return skip button id
     @staticmethod
     def skipSkin(self):
-        return self.driver.find_element_by_id(skip_button)
+        #WebDriverWait(self.driver,20).until(EC.element_located_to_be_selected(By.ID,constants.skip_button))
+        return self.driver.find_element_by_id(constants.skip_button)
 
 
 class AppLaunchPage(unittest.TestCase):
@@ -50,7 +64,7 @@ class AppLaunchPage(unittest.TestCase):
 # This function will return setting button id     
     @staticmethod   
     def settingButton(self):
-        return self.driver.find_element_by_id(setting_button)
+        return self.driver.find_element_by_id(constants.setting_button)
 
 # This function will return Trunote text 
     @staticmethod
@@ -60,12 +74,12 @@ class AppLaunchPage(unittest.TestCase):
 # This function will return Trunote button id
     @staticmethod
     def trueNoteButton(self):
-        return self.driver.find_element_by_id(truenote_button)
+        return self.driver.find_element_by_id(constants.truenote_button)
     
 # This function will return anc button id    
     @staticmethod
     def ancButton(self):
-        return self.driver.find_element_by_id(anc_button)
+        return self.driver.find_element_by_id(constants.anc_button)
     
 
     
@@ -75,7 +89,7 @@ class AppSettingPage(unittest.TestCase):
      
     @staticmethod
     def programmableSmartButton(self):
-        return self.driver.find_element_by_id(smart_button)      
+        return self.driver.find_element_by_id(constants.smart_button)      
     
     #navigation function to setting screen
 
@@ -84,7 +98,7 @@ class AppProgrammableSmartButtonPage(unittest.TestCase):
     
     @staticmethod
     def ambientawareButton(self):
-        return self.driver.find_element_by_id(ambient_aware)
+        return self.driver.find_element_by_id(constants.ambient_aware)
         
  
  
