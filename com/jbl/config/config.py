@@ -23,9 +23,9 @@ class setupConfig(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-
-#     def __init__(self, params):
-#         '''
-#         Constructor
-#         '''
         
+#     def wait_for_App_launch(self):
+#         element_id = app.skipSkin(self)
+#         Wait.waitfor(self, element_id)
+#         if app.skipSkin(self) != None:
+#             app.skipSkin(self).click()
