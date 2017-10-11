@@ -34,4 +34,9 @@ noise_cancellation_button = "jbl.stc.com:id/noiceCancelling"
 programmable_button_title_text = "jbl.stc.com:id/barTitleText"
 left_header_button = "jbl.stc.com:id/leftHeaderBtn"
 
+
 wait_for_app_launch = 15000
+
+# Bluetooth Setting on native app
+
+JBL_Everest_Elite_750NC = 'JBL Everest Elite 750NC'

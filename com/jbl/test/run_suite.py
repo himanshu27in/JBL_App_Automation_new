@@ -44,6 +44,7 @@ import test_app_programmableSmartButton_page
 #import HtmlTestRunner
 from HtmlTestRunner import HTMLTestRunner
 import logging
+from com.jbl.test import test_bluetooth_setting
  
     
 #####  Running test case- by using below run method each test result will be displayed
@@ -55,9 +56,10 @@ def main():
            
         # add tests to test suite
            
-    suite.addTest(loader.loadTestsFromModule(test_appSetting))
-    suite.addTest(loader.loadTestsFromModule(test_app_launch_page))
-    suite.addTest(loader.loadTestsFromModule(test_app_programmableSmartButton_page))
+#     suite.addTest(loader.loadTestsFromModule(test_appSetting))
+#     suite.addTest(loader.loadTestsFromModule(test_app_launch_page))
+#     suite.addTest(loader.loadTestsFromModule(test_app_programmableSmartButton_page))
+    suite.addTest(loader.loadTestsFromModule(test_bluetooth_setting))
          
     logging.debug("This will be printed 1============================")  
      
