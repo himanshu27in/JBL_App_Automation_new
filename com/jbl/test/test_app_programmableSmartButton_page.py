@@ -1,5 +1,5 @@
 '''
-Created on Sep 11, 2017
+Created on Sep 15, 2017
 
 @author: hkumar04
 '''
@@ -12,14 +12,12 @@ from com.jbl.common_method import AppProgrammableSmartButtonPage as absbp
 from com.jbl.common_method import constants
 
 
-class Test_appSetting(setupConfig):
-    
+class Test_appProgrammableSmartButton(setupConfig):
 
-        
-    def test_01(self):
-        
-        
-        #setupConfig.wait_for_App_launch(self)
+
+#    @unittest.skip("Test Skipped2")      
+    def test_01_ambientaware_setting(self):
+          
         self.driver.implicitly_wait(constants.wait_for_app_launch)
         if app.skipSkin(self) != None:
             app.skipSkin(self).click()
@@ -32,5 +30,4 @@ class Test_appSetting(setupConfig):
         
         aa_button = absbp.ambientawareButton(self)
         aa_button.click()
-        self.assertEqual(1, 1, 'Equal')
 #         print "AA button clicked\n"
