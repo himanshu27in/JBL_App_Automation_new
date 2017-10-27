@@ -40,3 +40,19 @@ wait_for_app_launch = 15000
 # Bluetooth Setting on native app
 
 JBL_Everest_Elite_750NC = 'JBL Everest Elite 750NC'
+
+# Avnera apiclient.exe path
+headphone_play_button = "start cmd.exe /C D:\\apiclient.exe app.param.set 0x84 0x10005"
+headphone_pause_button = "start cmd.exe /C D:\\apiclient.exe app.param.set 0x84 0x10005"
+headphone_smart_button = "start cmd.exe /C D:\\apiclient.exe app.param.set 0x84 0x20005"
+headphone_volumeUp_button = "start cmd.exe /C D:\\apiclient.exe app.param.set 0x84 0x30005"
+headphone_volumeDown_button = "start cmd.exe /C D:\\apiclient.exe app.param.set 0x84 0x40005"
+headphone_power_button = "start cmd.exe /C D:\\apiclient.exe app.param.set 0x84 0x50005" #not enabled
+headphone_pairing_request_button = "start cmd.exe /C D:\\apiclient.exe app.param.set 0x84 0x60008"
+
+# not available
+headphone_volumeUp_MFB_button = 0
+headphone_volumeDown_MFB_button = 0
+headphone_volumeUp_volumeDown_button = 0
+headphone_volumeUp_smart_button = 0
+headphone_volumeUp_volumeDown_button = 0
