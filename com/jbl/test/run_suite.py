@@ -41,6 +41,7 @@ import unittest
 import test_appSetting
 import test_app_launch_page
 import test_app_programmableSmartButton_page
+import presetup_run_tool
 #import HtmlTestRunner
 from HtmlTestRunner import HTMLTestRunner
 import logging
@@ -59,6 +60,7 @@ def main():
 #     suite.addTest(loader.loadTestsFromModule(test_appSetting))
 #     suite.addTest(loader.loadTestsFromModule(test_app_launch_page))
 #     suite.addTest(loader.loadTestsFromModule(test_app_programmableSmartButton_page))
+    suite.addTest(loader.loadTestsFromModule(presetup_run_tool))
     suite.addTest(loader.loadTestsFromModule(test_bluetooth_setting))
          
     logging.debug("This will be printed 1============================")  

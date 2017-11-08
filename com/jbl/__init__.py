@@ -6,7 +6,7 @@ import json
 #from .first_class import FirstClass
 #from .second_class import SecondClass
    
-from test.test_app_launch_page import Test_launchApp
+#from test.test_app_launch_page import Test_launchApp
   
    
 # If applicable, delete the existing log file to generate a fresh log file during each execution
