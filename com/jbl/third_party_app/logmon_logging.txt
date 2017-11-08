@@ -1,0 +1,163 @@
+50.82: Application - BatteryCBParam: BattOK
+[Codes read]
+53.81: Application - BatteryCBParam: BattOK
+54.44: Application - AppParam: 0x00000084
+54.44: System - SysEvent: BUTTON_PRESS
+54.44: System - SysEventData: 1
+54.44: System - Line: 321
+54.50: System - SysState: CONNECTED
+54.50: System - Button_Pressed: MFB
+54.50: System - btAppAnyDevicesConnected: 1
+54.50: System - HFP_STATUS: HFP_STATUS_Connected
+54.50: System - SysState: CONNECTED
+54.50: System - btAppAnyDevicesConnected: 1
+54.50: Application - AVRCP_ButtonId: AVRCP_PASS_THROUGH_ID_PLAY
+54.50: Application - AVRCP_ButtonId: AVRCP_PASS_THROUGH_ID_PLAY
+55.43: BtAf - hciEvent: etMode_Change_Event
+55.43: BtConnMgrAf - SniffDevice: 0xF91AB902
+55.43: BtConnMgrAf - SniffMode: UNSNIFF
+55.43: btcm - BtcmConnectionEventNotify: BtcmEvent_EnterActiveMode
+55.43: BtAf - aud_event: etAUD_Remote_Control_Command_Confirmation
+55.43: BtAf - avrcp_event: amtPassThrough
+55.43: btcm - BtcmConnectionEventBeginProcessing: BtcmEvent_EnterActiveMode
+55.43: btcm - BtcmConnectionEventEndProcessing: BtcmEvent_EnterActiveMode
+55.43: BtAf - aud_event: etAUD_Remote_Control_Command_Confirmation
+55.43: BtAf - avrcp_event: amtPassThrough
+55.43: BtAf - aud_event: etAUD_Stream_State_Change_Indication
+55.43: btcm - BtcmConnectionEventNotify: BtcmEvent_InitiateTakeover
+55.43: btcm - BtcmConnectionEventBeginProcessing: BtcmEvent_InitiateTakeover
+55.43: btcm - eventInitiateTakeover
+55.43: btcm - BtcmTakeoverState: BtcmTakeoverState_RingLeaderPending
+55.43: btcm - BtcmConnectionEventNotify: BtcmEvent_AbortSeek
+55.43: btcm - BtcmConnectionEventNotify: BtcmEvent_TakeoverRequestGranted
+55.43: btcm - BtcmConnectionEventEndProcessing: BtcmEvent_InitiateTakeover
+55.43: btcm - BtcmConnectionEventBeginProcessing: BtcmEvent_AbortSeek
+55.43: btcm - BtcmConnectionEventEndProcessing: BtcmEvent_AbortSeek
+55.43: btcm - BtcmConnectionEventBeginProcessing: BtcmEvent_TakeoverRequestGranted
+55.43: btcm - eventGRANT_TAKEOVERMessageReceived
+55.43: btcm - BtcmTakeoverState: BtcmTakeoverState_RingLeaderNode
+55.43: BtConnMgrAf - Line: 658
+55.43: BtConnMgrAf - Line: 661
+55.43: btcm - BtcmConnectionEventNotify: BtcmEvent_TakeoverComplete
+55.43: btcm - BtcmTakeoverRingleaderSMState: BtcmTakeoverRingleaderSMState_WaitingForTakeoverCompleteAck
+55.43: btcm - BtcmConnectionEventNotify: BtcmEvent_TakeoverSppMessagesFinished
+55.43: btcm - BtcmTakeoverRingleaderSMState: BtcmTakeoverRingleaderSMState_WaitingForTakeoverCompleteAck
+55.43: btcm - BtcmConnectionEventNotify: BtcmEvent_TakeoverSppMessagesFinished
+55.43: btcm - BtcmConnectionEventEndProcessing: BtcmEvent_TakeoverRequestGranted
+55.43: btcm - BtcmConnectionEventBeginProcessing: BtcmEvent_TakeoverComplete
+55.43: btcm - BtcmConnectionEventEndProcessing: BtcmEvent_TakeoverComplete
+55.43: btcm - BtcmConnectionEventBeginProcessing: BtcmEvent_TakeoverSppMessagesFinished
+55.43: btcm - eventTakeoverSppMessagesFinished
+55.43: btcm - BtcmTakeoverRingleaderSMState: BtcmTakeoverRingleaderSMState_StreamingAudio
+55.43: AVPRAf - avprActivateState: A2DP_Playing
+55.43: AVPRAf - avprTargetBD_ADDR: 0xF91AB902
+55.43: Application - SetVolumeIndex: 7
+55.43: Application - CurrentVolume: -500
+55.43: System - SetFeature: Headphone_Volume
+55.43: System - FeatureValue: -21
+55.43: System - StreamOwner: 0xF91AB902
+55.43: Application - btReconnectStop: 326
+55.43: System - ContextBdAddress: 0x00000000
+55.43: btcm - BtcmConnectionEventEndProcessing: BtcmEvent_TakeoverSppMessagesFinished
+55.43: BtAf - hciEvent: etFlow_Specification_Complete_Event
+55.43: BtAf - aud_event: etAUD_Remote_Control_Command_Confirmation
+55.43: BtAf - avrcp_event: amtRegisterNotification
+55.43: BtConnMgrAf - PlayStatus: PLAYING
+55.43: System - SysEvent: A2DP_AUDIO_CHANGE
+55.43: System - SysEventData: 1
+55.43: System - Line: 321
+55.43: btcm - BtcmConnectionEventBeginProcessing: BtcmEvent_TakeoverSppMessagesFinished
+55.43: System - StreamOwner: 0xF91AB902
+55.43: Application - btReconnectStop: 326
+55.43: System - ContextBdAddress: 0x00000000
+55.43: btcm - BtcmConnectionEventEndProcessing: BtcmEvent_TakeoverSppMessagesFinished
+55.43: System - SysState: AUDIO_PLAYBACK
+55.43: BtAf - aud_event: etAUD_Remote_Control_Command_Confirmation
+55.43: BtAf - avrcp_event: amtRegisterNotification
+55.43: BtConnMgrAf - PlayStatus: PLAYING
+55.43: System - SysState: AUDIO_PLAYBACK
+55.43: Overlay - SysContext: BT_AAC
+55.43: System - StreamOwner: 0xF91AB902
+55.43: Overlay - SysContext: BT_SBC
+55.43: System - StreamOwner: 0xF91AB902
+55.43: Overlay - SysContext: BT_SBC
+55.50: Overlay - OvlPoolSize: 50112
+55.50: CodecFramework - CodecFwImInit
+55.50: CodecFramework - CodecFwIfInstallDatapath
+55.50: CodecFramework - CodecFwImRegisterConfig: CodecFWType_SBC_DEC
+55.50: Audio - AudioPool: 8192
+55.50: Audio - AudioPool: 8192
+55.50: Overlay - BaselineCpuSpeed: 49.152MHz
+55.50: Overlay - CpuSpeed: 49.152MHz
+55.50: System - SetFeature: Microphone_Enable
+55.50: System - FeatureValue: 0
+55.50: Audio - InputMask: 0x00000001
+55.50: Audio - ActiveStreams: 0x00000C01
+55.50: System - StreamOwner: 0xF91AB902
+55.50: CodecFramework - CodecFwIfType: CodecFwIfType_SBC_DEC
+55.50: Truesbcdec_ResetProcessing: 0x00000050
+55.50: CodecFramework - CodecVersion: SBC/mSBC Decoder(2013.12.08)
+55.50: Truesbcdec_inputFrameSize: 0x00000083
+55.50: Truesbcdec_samplesPerSbcFrame: 0x00000080
+55.50: Truesbcdec_outputFrameSize: 0x00000200
+55.50: Truesbcdec_sf: 0x0000AC44
+55.50: Truesbcdec_bl: 0x00000010
+55.50: Truesbcdec_chm: 0x00000003
+55.50: Truesbcdec_nch: 0x00000002
+55.50: Truesbcdec_sb: 0x00000008
+55.50: Truesbcdec_bp: 0x0000003B
+55.50: Truesbcdec_sf_index: 0x00000002
+55.50: Truesbcdec_am: 0x00000001
+55.50: Truesbcdec_max_bitneed: 0x0000000B
+55.50: CodecFramework - Audio_Path_Buffering_State: Buffering
+55.50: Truesbcdec_BytesConsumed: 0x00000083
+55.50: Truesbcdec_OutputDataSizeInBytes: 0x00000200
+55.50: Truesbcdec_Line: 0x00000233
+55.50: Truesbcdec_outputFrameSize: 0x00000200
+55.50: Truesbcdec_pOutputBuffer: 0x000AB9A0
+55.50: Truesbcdec_Line: 0x00000233
+55.50: Truesbcdec_outputFrameSize: 0x00000200
+55.50: Truesbcdec_pOutputBuffer: 0x000ABBA0
+55.50: System - OverRidePowerSource: bmPowerFromVDCoverride
+55.56: Audio - AudioIfMask: 0x00000012
+55.56: Audio - DisableMask: 0x00000000
+55.56: Audio - ActiveStreams: 0x00000C11
+55.56: Audio - EnablingDSP
+55.56: Overlay - CpuSpeed: 49.152MHz
+55.56: Audio - testLine: 65535
+55.56: Audio - AudioIfMask: 0x00000012
+55.56: Audio - AudioIfMask: 0x00000012
+55.56: System - SetFeature: Headphone_Volume
+55.56: System - FeatureValue: -21
+55.56: System - StreamOwner: 0xF91AB902
+55.56: System - CachedA2DPVolumeIndex: 7
+55.56: System - SysEvent: A2DP_AUDIO_CHANGE
+55.56: System - SysEventData: 1
+55.56: System - Line: 321
+55.56: System - SysState: AUDIO_PLAYBACK
+55.56: System - SysState: AUDIO_PLAYBACK
+55.56: Overlay - SysContext: BT_AAC
+55.56: Audio - AudioPoolFree: 37
+55.56: Audio - AudioPoolFree: 37
+55.56: System - StreamOwner: 0xF91AB902
+55.56: Overlay - SysContext: BT_SBC
+55.56: Audio - AudioPool: 8192
+55.56: Audio - AudioPool: 8192
+55.56: Overlay - BaselineCpuSpeed: 49.152MHz
+55.56: Overlay - CpuSpeed: 49.152MHz
+55.56: System - SetFeature: Microphone_Enable
+55.56: System - FeatureValue: 0
+55.56: Audio - InputMask: 0x00000001
+55.56: Audio - ActiveStreams: 0x00000C11
+55.62: System - StreamOwner: 0xF91AB902
+55.62: System - OverRidePowerSource: bmPowerFromVDCoverride
+55.62: Audio - AudioIfMask: 0x00000012
+55.62: Audio - AudioIfMask: 0x00000012
+55.62: Audio - AudioIfMask: 0x00000012
+55.62: System - SetFeature: Headphone_Volume
+55.62: System - FeatureValue: -21
+55.62: System - StreamOwner: 0xF91AB902
+55.62: System - CachedA2DPVolumeIndex: 7
+55.68: freemem - FreeMem: 7104
+55.68: CodecFramework - Audio_Path_Buffering_State: Running
+56.81: Application - BatteryCBParam: BattOK

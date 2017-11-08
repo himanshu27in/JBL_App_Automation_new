@@ -18,6 +18,9 @@ from time import sleep
 import unittest
 from appium.webdriver.common.touch_action import TouchAction
 
+
+from com.jbl.third_party_app.logmon_log_capture_tool import Logmon_Tool_Parser
+
 '''
 This class is having all test cases related to bluetooth pairing,
 bluetooth available devices, connecting and disconnecting via BT 
@@ -148,7 +151,7 @@ class Bluetooth_Connection_Setting(setupConfig):
 #                 flag = True
         return flag             
 
-#     @unittest.skip("test_01_connect_headphone_via_BT_in_pairing_state")
+    @unittest.skip("test_01_connect_headphone_via_BT_in_pairing_state")
     def test_01_connect_headphone_via_BT_in_pairing_state(self):
         logging.info("Executing test_01_connect_headphone_via_BT_in_pairing_state")
         # To open Bluetooth settings screen on mobile
@@ -195,7 +198,7 @@ class Bluetooth_Connection_Setting(setupConfig):
             assert False
 
         
-#     @unittest.skip("test_02_disconnect_already_connected_headphone")      
+    @unittest.skip("test_02_disconnect_already_connected_headphone")      
     def test_02_disconnect_already_connected_headphone(self):
         logging.info("Executing test_02_disconnect_already_connected_headphone")
         # To open Bluetooth settings screen on mobile
@@ -219,7 +222,7 @@ class Bluetooth_Connection_Setting(setupConfig):
 
 
 
-#     @unittest.skip("test_03_reboot_headphone_to_validate_connected_to_previously_connected_device")  
+    @unittest.skip("test_03_reboot_headphone_to_validate_connected_to_previously_connected_device")  
     def test_03_reboot_headphone_to_validate_connected_to_previously_connected_device(self):
         
         logging.info("Executing test_03_reboot_headphone_to_validate_connected_to_previously_connected_device")
@@ -240,7 +243,7 @@ class Bluetooth_Connection_Setting(setupConfig):
         check_connected = self.headphone_already_connected()
         assert check_connected        
 
-#     @unittest.skip("test_04_unpair_connected_device")      
+    @unittest.skip("test_04_unpair_connected_device")      
     def test_04_unpair_connected_device(self):
         logging.info("Executing test_04_unpair_connected_device")
         # To open Bluetooth settings screen on mobile
@@ -257,7 +260,7 @@ class Bluetooth_Connection_Setting(setupConfig):
             logging.info("Headphone is already unpaired with the device")
             assert False
             
-#     @unittest.skip("test_05_send_pairing_request_and_connect")             
+    @unittest.skip("test_05_send_pairing_request_and_connect")             
     def test_05_send_pairing_request_and_connect(self):
         logging.info("Executing test_05_send_pairing_request_and_connect")
         # To open Bluetooth settings screen on mobile
@@ -274,4 +277,31 @@ class Bluetooth_Connection_Setting(setupConfig):
         else:
             logging.info("Headphone is not in pairing state,Pairing request failed ...")
             assert False
+        
+        
+        
+    def test_06_send_play_request_to_headset(self):
+        logging.info("Executing test_06_send_play_request_to_headset")
+        # To open Bluetooth settings screen on mobile        
+        SXNA.launch_bt_setting_page(self)
+
+        #Headphone is already paired and connected to any mobile
+        check_connected = self.headphone_already_connected()
+        if check_connected == True:
+            logging.info("Headphone already connected")
+        else:
+            self.connect_headphone_via_bt()
+    
+        # open logmon and clear logmon log
+         
+        Logmon_Tool_Parser.click_clearButton_logmon_tool()
+        Logmon_Tool_Parser.click_readCodesButton_logmon_tool()          
+
+        #send play command   
+        hcb.headPhone_Play_Button(self)
+        sleep(1)
+        Logmon_Tool_Parser.capture_logmon_log_and_save_it()
+        # capture logmon log and save  it
+        
+        
         
