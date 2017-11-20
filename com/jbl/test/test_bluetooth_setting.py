@@ -20,6 +20,7 @@ from appium.webdriver.common.touch_action import TouchAction
 
 
 from com.jbl.third_party_app.logmon_log_capture_tool import Logmon_Tool_Parser
+from com.jbl.common_method import logmonlogStringToCompare
 
 '''
 This class is having all test cases related to bluetooth pairing,
@@ -295,12 +296,23 @@ class Bluetooth_Connection_Setting(setupConfig):
         # open logmon and clear logmon log
          
         Logmon_Tool_Parser.click_clearButton_logmon_tool()
-        Logmon_Tool_Parser.click_readCodesButton_logmon_tool()          
-
+        #Logmon_Tool_Parser.click_readCodesButton_logmon_tool()          
+        sleep(1)
+        #self.driver.implicitly_wait(2)
         #send play command   
         hcb.headPhone_Play_Button(self)
-        sleep(1)
+        #self.driver.implicitly_wait(3)
+        Logmon_Tool_Parser.click_enableButton_logmon_tool()
+        Logmon_Tool_Parser.click_enableButton_logmon_tool()
+
+        #self.driver.implicitly_wait(2)
         Logmon_Tool_Parser.capture_logmon_log_and_save_it()
+        
+        Logmon_Tool_Parser.click_enableButton_logmon_tool()
+        Logmon_Tool_Parser.click_enableButton_logmon_tool()
+        
+        #play_log_list = ['AVRCP_PASS_THROUGH_ID_PLAY','A2DP_Playing','AUDIO_PLAYBACK']
+        assert Logmon_Tool_Parser.compare_and_validate_functionality(logmonlogStringToCompare.a2dp_playing_log)
         # capture logmon log and save  it
         
         

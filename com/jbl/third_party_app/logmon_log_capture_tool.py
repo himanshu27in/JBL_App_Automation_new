@@ -6,6 +6,7 @@ Created on Nov 3, 2017
 
 import os
 import win32gui
+import re
 
 import logging
 from time import sleep
@@ -14,6 +15,7 @@ import win32con
 
 from com.jbl.common_method import constants
 from os import path
+from pip._vendor.distlib._backport.tarfile import TUEXEC
 class Logmon_Tool_Parser():
 
     ''' 
@@ -78,6 +80,7 @@ class Logmon_Tool_Parser():
     def click_clearButton_logmon_tool():
         # To click Clear button in LogMon to clear old log
         logmon_handler = win32gui.FindWindow(None,"LxLogMon localhost:8377")
+        win32gui.GetForegroundWindow() 
         logmon_child_handler=win32gui.FindWindowEx(logmon_handler,0,"wxWindowClassNR",'panel') 
         enable_child_handle=win32gui.FindWindowEx(logmon_child_handler, 0, 'wxWindowClassNR', 'Clear')
         enable_childwindow_Name = win32gui.GetWindowText(enable_child_handle)
@@ -90,7 +93,7 @@ class Logmon_Tool_Parser():
     @staticmethod
     def capture_logmon_log_and_save_it():
         logmon_handler = win32gui.FindWindow(None,"LxLogMon localhost:8377")
-        #win32gui.SetForegroundWindow(logmon_handler)
+        win32gui.SetForegroundWindow(logmon_handler)
         sleep(2)
         panel_child_handler=win32gui.FindWindowEx(logmon_handler,0,"wxWindowClassNR",'panel') 
         splitter_child_handler=win32gui.FindWindowEx(panel_child_handler,0,"wxWindowClassNR",'splitter') 
@@ -129,6 +132,7 @@ class Logmon_Tool_Parser():
         win32api.keybd_event(0x41, 0, win32con.KEYEVENTF_KEYUP, 0)
         sleep(1)
         
+        #crtl v
         win32api.keybd_event(0x11, 0, 0, 0) #0x11 is ctrl
         win32api.keybd_event(0x56, 0, 0, 0) # 0x41 is v
         sleep(.05)
@@ -164,18 +168,24 @@ class Logmon_Tool_Parser():
 
         
     @staticmethod   
-    def compare_and_validate_functioanlity(listOfStringToValidate):
+    def compare_and_validate_functionality(listOfStringToValidate=[]):
         
-        flag = True
-        i=0
-        with open('D:\Automation\Eclipse_workspace\JBL_python\com\jbl\third_party_app\logmon_logging.txt','r') as logmon_log:
-            for line in logmon_log:
-                if listOfStringToValidate[i] == line:
-                    i+=1
-                    continue
+        #flag = True
+        with open(r'D:\Automation\Eclipse_workspace\JBL_python\com\jbl\third_party_app\logmon_logging.txt','r') as logmon_log:
+            for word in listOfStringToValidate:
+                #if all(word in line.split() for line in logmon_log.readlines()):
+                #for line in logmon_log.readlines():
+                    #if re.search(word,line,re.I):
+                if word in logmon_log.read():
+                    logmon_log.seek(0)
+                    logging.info(word)
+                    logging.info("inside if")
+                    flag = True
                 else:
-                    flag = False 
+                    logging.info("Given search string is not found...")
+                    flag = False
+                    break
         return flag
-
+        logmon_log.close()
     
     
