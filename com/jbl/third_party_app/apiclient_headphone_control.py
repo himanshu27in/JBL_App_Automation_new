@@ -28,3 +28,15 @@ class HeadsetControlButton(object):
     @staticmethod        
     def headPhone_Pairing_request_Button(self):
         os.system(constants.headphone_pairing_request_button)
+        
+    @staticmethod
+    def headphone_smart_button_press_once(self):
+        os.system(constants.headphone_smart_button)
+    
+    @staticmethod
+    def headphone_volume_up_button(self):
+        os.system(constants.headphone_volumeUp_button)
+        
+    @staticmethod
+    def headphone_volume_down_button(self):
+        os.system(constants.headphone_volumeDown_button)   

@@ -38,14 +38,15 @@ Created on Sep 11, 2017
 
     
 import unittest
-import test_appSetting
-import test_app_launch_page
-import test_app_programmableSmartButton_page
-import presetup_run_tool
 #import HtmlTestRunner
 from HtmlTestRunner import HTMLTestRunner
 import logging
+from com.jbl.test import test_appSetting
+from com.jbl.test import test_app_launch_page
+from com.jbl.test import test_app_programmableSmartButton_page
+from com.jbl.test import presetup_run_tool
 from com.jbl.test import test_bluetooth_setting
+from com.jbl.test import test_headset_basic_function
  
     
 #####  Running test case- by using below run method each test result will be displayed
@@ -53,15 +54,16 @@ from com.jbl.test import test_bluetooth_setting
     #initialize the test suite
 def main():   
     loader = unittest.TestLoader()
-    suite = unittest.TestSuite()
-           
+    suite = unittest.TestSuite()     
         # add tests to test suite
            
 #     suite.addTest(loader.loadTestsFromModule(test_appSetting))
 #     suite.addTest(loader.loadTestsFromModule(test_app_launch_page))
 #     suite.addTest(loader.loadTestsFromModule(test_app_programmableSmartButton_page))
+
     suite.addTest(loader.loadTestsFromModule(presetup_run_tool))
-    suite.addTest(loader.loadTestsFromModule(test_bluetooth_setting))
+#     suite.addTest(loader.loadTestsFromModule(test_bluetooth_setting))
+    suite.addTest(loader.loadTestsFromModule(test_headset_basic_function))
          
     logging.debug("This will be printed 1============================")  
      
