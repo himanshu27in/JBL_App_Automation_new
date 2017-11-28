@@ -6,6 +6,8 @@ Created on Oct 24, 2017
 
 from com.jbl.common_method import constants
 import os
+from __builtin__ import staticmethod
+from time import sleep
 class HeadsetControlButton(object):
     '''
     This class is used to control the headset button functionality like play pause and others.
@@ -40,3 +42,27 @@ class HeadsetControlButton(object):
     @staticmethod
     def headphone_volume_down_button(self):
         os.system(constants.headphone_volumeDown_button)   
+        
+    @staticmethod
+    def headphone_set_max_volume(self):
+        for volume in range(0,17):
+            os.system(constants.headphone_volumeUp_button)
+            sleep(1)
+            
+    @staticmethod
+    def headphone_set_min_volume(self):
+        for volume in range(0,17):
+            os.system(constants.headphone_volumeDown_button)
+            sleep(1)
+    
+    @staticmethod
+    def headphone_anc_on_button(self):
+        os.system(constants.headphone_volumeUp_smart_button)
+        
+    @staticmethod
+    def headphone_anc_off_button(self):
+        os.system(constants.headphone_volumeDown_smart_button)
+        
+    @staticmethod
+    def headphone_factory_reset_button(self):
+        os.system(constants.headphone_volumeUp_volumeDown_button)
