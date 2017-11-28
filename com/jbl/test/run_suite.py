@@ -75,7 +75,7 @@ def main():
     logging.debug("This will be printed 4============================")  
  
 if __name__ == "__main__":
-    print "this wil be printed in main----------------------"
+    print "Executing main----------------------"
     main()
 
 

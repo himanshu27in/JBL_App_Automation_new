@@ -12,6 +12,7 @@ import logging
 from time import sleep
 import win32api
 import win32con
+import win32com.client
 
 from com.jbl.common_method import constants
 from os import path
@@ -116,9 +117,12 @@ class Logmon_Tool_Parser():
         sleep(2)
         
         
-        #if path.isfile("logmon_logging.txt"):
-        #open("logmon_logging.txt",'w')
-        os.startfile(r"D:\Automation\Eclipse_workspace\JBL_python\com\jbl\third_party_app\logmon_logging.txt")
+        #os.startfile(r'D:\Automation\Eclipse_workspace\JBL_python\com\jbl\third_party_app\logmon_logging.txt')
+        logging.info(os.getcwd())
+        logging.info(os.path.join(os.path.dirname(__file__), 'logmon_logging.txt'))
+        path = os.path.join(os.path.dirname(__file__), 'logmon_logging.txt')
+        os.startfile(path)     
+        
         notepad_handle = win32gui.FindWindow(None, "logmon_logging - Notepad")
         sleep(2)
         #win32gui.SetForegroundWindow(notepad_handle)
@@ -171,18 +175,21 @@ class Logmon_Tool_Parser():
     def compare_and_validate_functionality(listOfStringToValidate=[]):
         
         #flag = True
-        with open(r'D:\Automation\Eclipse_workspace\JBL_python\com\jbl\third_party_app\logmon_logging.txt','r') as logmon_log:
+        path = os.path.join(os.path.dirname(__file__), 'logmon_logging.txt')
+        with open(path,'r') as logmon_log:
+        #with open(r'D:\Automation\Eclipse_workspace\JBL_python\com\jbl\third_party_app\logmon_logging.txt','r') as logmon_log:
             for word in listOfStringToValidate:
                 #if all(word in line.split() for line in logmon_log.readlines()):
                 #for line in logmon_log.readlines():
                     #if re.search(word,line,re.I):
                 if word in logmon_log.read():
                     logmon_log.seek(0)
+                    logging.info("Given search string is found...")
                     logging.info(word)
-                    logging.info("inside if")
                     flag = True
                 else:
                     logging.info("Given search string is not found...")
+                    logging.info(word)
                     flag = False
                     break
         return flag
