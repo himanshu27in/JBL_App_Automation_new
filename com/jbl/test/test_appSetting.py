@@ -18,8 +18,7 @@ class Test_appSetting(setupConfig):
         
     def test_01(self):
         
-        
-        #setupConfig.wait_for_App_launch(self)
+
         self.driver.implicitly_wait(constants.wait_for_app_launch)
         if app.skipSkin(self) != None:
             app.skipSkin(self).click()
