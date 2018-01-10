@@ -6,17 +6,19 @@ Created on Nov 3, 2017
 
 import os
 import win32gui
-import re
+#import re
 
 import logging
 from time import sleep
 import win32api
 import win32con
-import win32com.client
+#import win32com.client
 
 from com.jbl.common_method import constants
-from os import path
-from pip._vendor.distlib._backport.tarfile import TUEXEC
+
+
+
+
 class Logmon_Tool_Parser():
 
     ''' 
@@ -24,8 +26,7 @@ class Logmon_Tool_Parser():
     First enable logmon and clear all old log .After tha copy log and parse it
     
     '''
-    
- 
+   
     
     
     @staticmethod
@@ -123,7 +124,7 @@ class Logmon_Tool_Parser():
         path = os.path.join(os.path.dirname(__file__), 'logmon_logging.txt')
         os.startfile(path)     
         
-        notepad_handle = win32gui.FindWindow(None, "logmon_logging - Notepad")
+        win32gui.FindWindow(None, "logmon_logging - Notepad")
         sleep(2)
         #win32gui.SetForegroundWindow(notepad_handle)
         win32gui.GetForegroundWindow()
@@ -160,7 +161,7 @@ class Logmon_Tool_Parser():
         win32api.keybd_event(0x12, 0, win32con.KEYEVENTF_KEYUP, 0)
         win32api.keybd_event(0x46, 0, win32con.KEYEVENTF_KEYUP, 0)
         #down arrow
-        for i in range (0,6):
+        for _i in range (0,6):   # _variable name is used if it is not used in iteration
             win32api.keybd_event(0x11, 0, 0, 0)
             win32api.keybd_event(0x28, 0, 0, 0)
             sleep(.5)

@@ -12,7 +12,7 @@ from com.jbl.third_party_app.logmon_log_capture_tool import Logmon_Tool_Parser
 from com.jbl.common_method import logmonlogStringToCompare
 import unittest
 from shutil import copyfile
-import os
+#import os
 from com.jbl.common_method import constants
 
 class Headset_Basic_Function(unittest.TestCase):
@@ -295,4 +295,3 @@ class Headset_Basic_Function(unittest.TestCase):
             assert status
         else:
             assert status 
-     

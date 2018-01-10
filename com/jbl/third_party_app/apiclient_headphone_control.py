@@ -45,13 +45,13 @@ class HeadsetControlButton(object):
         
     @staticmethod
     def headphone_set_max_volume(self):
-        for volume in range(0,17):
+        for _volume in range(0,17):   #_variable name is used if it is unused
             os.system(constants.headphone_volumeUp_button)
             sleep(1)
             
     @staticmethod
     def headphone_set_min_volume(self):
-        for volume in range(0,17):
+        for _volume in range(0,17):
             os.system(constants.headphone_volumeDown_button)
             sleep(1)
     

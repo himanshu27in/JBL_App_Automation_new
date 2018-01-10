@@ -56,17 +56,18 @@ def main():
     loader = unittest.TestLoader()
     suite = unittest.TestSuite()     
         # add tests to test suite
-           
-#     suite.addTest(loader.loadTestsFromModule(test_appSetting))
-#     suite.addTest(loader.loadTestsFromModule(test_app_launch_page))
-#     suite.addTest(loader.loadTestsFromModule(test_app_programmableSmartButton_page))
 
+    # add bluetooth setting first so that headset is already connected with mobile
+    suite.addTest(loader.loadTestsFromModule(test_bluetooth_setting))
+    suite.addTest(loader.loadTestsFromModule(test_appSetting))
+    suite.addTest(loader.loadTestsFromModule(test_app_launch_page))
+    suite.addTest(loader.loadTestsFromModule(test_app_programmableSmartButton_page))
+ 
     suite.addTest(loader.loadTestsFromModule(presetup_run_tool))
-#     suite.addTest(loader.loadTestsFromModule(test_bluetooth_setting))
     suite.addTest(loader.loadTestsFromModule(test_headset_basic_function))
          
     logging.debug("This will be printed 1============================")  
-     
+    
      
     logging.debug("This will be printed 2============================")   
     runner = HTMLTestRunner(output='JBL_Test_Report')
